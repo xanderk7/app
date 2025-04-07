@@ -39,3 +39,32 @@ def main():
 
         else:
             print("Invalid choice. Try again.")
+
+if __name__ == "__main__":
+    main()
+
+import tkinter as tk
+from tkinter import messagebox
+
+# Function to add a task
+def add_task():
+    task = task_entry.get()
+    if task != "":
+        task_listbox.insert(tk.END, task)
+        task_entry.delete(0, tk.END)
+    else:
+        messagebox.showwarning("Input error", "Please enter a task.")
+
+# Function to remove selected task
+def remove_task():
+    selected = task_listbox.curselection()
+    if selected:
+        task_listbox.delete(selected)
+    else:
+        messagebox.showwarning("Selection error", "Please select a task to remove.")
+
+# Create the main window
+window = tk.Tk()
+window.title("To-Do List")
+window.geometry("400x400")
+window.configure(bg="#f5f5f5")

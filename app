@@ -68,3 +68,27 @@ window = tk.Tk()
 window.title("To-Do List")
 window.geometry("400x400")
 window.configure(bg="#f5f5f5")
+
+# Title label
+title_label = tk.Label(window, text="To-Do List", font=("Arial", 18, "bold"), bg="#f5f5f5")
+title_label.pack(pady=10)
+
+# Task entry field
+task_entry = tk.Entry(window, font=("Arial", 14))
+task_entry.pack(pady=10, padx=20, fill=tk.X)
+
+# Add button
+add_button = tk.Button(window, text="Add Task", font=("Arial", 12), bg="#add8e6", command=add_task)
+add_button.pack(pady=5)
+
+# Task listbox
+task_listbox = tk.Listbox(window, font=("Arial", 12), selectbackground="#a3d2ca")
+task_listbox.pack(pady=10, padx=20, fill=tk.BOTH, expand=True)
+
+# Remove button
+remove_button = tk.Button(window, text="Remove Selected Task", font=("Arial", 12), bg="#f08080", command=remove_task)
+remove_button.pack(pady=5)
+
+# Run the app
+window.mainloop()
+

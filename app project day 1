@@ -6,6 +6,7 @@ def show_menu():
     print("4. Exit")
 
 def main():
+    tasks = []
     while True:
         show_menu()
         choice = input(input("Choose an option (1-4): "))

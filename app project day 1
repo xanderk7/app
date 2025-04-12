@@ -17,8 +17,13 @@ def main():
             print("\nYour tasks:")
             if not tasks:
                 print("No tasks yet.")
-        else:
-             for index, task in enumerate(tasks, start=1):
-                print(f"{index}. {task}")
+            else:
+                 for index, task in enumerate(tasks, start=1):
+                    print(f"{index}. {task}")
+         elif choice == "2":
+    task = input("Enter a task: ")
+    tasks.append(task)
+    print(f"Task '{task}' added.")
+
 if __name__ == "__main__":
     main()
